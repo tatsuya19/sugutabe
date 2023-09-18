@@ -84,6 +84,9 @@ header {
 
 @media screen and (max-width: 1000px) {
 
+    .header-wrapper{
+        padding:0;
+    }
 
     .main-top-wrapper {
         position: relative;
