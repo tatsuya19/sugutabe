@@ -966,6 +966,63 @@ header {
 
 
 
+  .qa {
+    font-size: 1.6rem;
+    max-width: 1040px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .qa .q {
+    background-color: #fcf7ef;
+    height: 60px;
+    padding: 24px 48px;
+    position: relative;
+    cursor: pointer;
+  }
+  .qa .q:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    background-color: #333;
+    right: 48px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .qa .q:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    background-color: #333;
+    right: 48px;
+    top: 50%;
+    transform: translate(0, -50%) rotate(90deg);
+  }
+  .qa .q.active:after {
+    display: none;
+  }
+  .qa .a {
+    background-color: #fcf7ef;
+    height: 100%;
+    display: none;
+    padding: 48px;
+  }
+
+  .qa  span{
+    color: #6ec300;
+  } 
+ 
+
+ 
+
+
+
+
+
+
 
 
 

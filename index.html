@@ -182,10 +182,6 @@
 
             <div class="introduction-item-wrepper">
 
-
-
-
-
                 <div class="introduction-item1">
                     <div class=introduction-image-wrepper>
                         <img class="introduction-image" src="image/item-1.jpg" alt="旬＊お試し野菜セット(6品目)">
@@ -287,22 +283,18 @@
 
         <div class="question">
             <h3>よくある質問</h3>
-            <div class="question-1">
-                <div class="question-text">
-                    <div class="question-Q">Q</div>
-                    <p>産地直送のサービスってよく見るけど何が違うの？</p>
+            <div class="qa">
+                <div class="q"><span>Q</span>産地直送のサービスってよく見るけど何が違うの？</div>
+                <div class="a"><span>A</span>鮮度が抜群に違います。
+                    通常の産直サービスは、一度倉庫などに野菜を集め、そこで箱詰め作業をして配送しています。この仕組みでは、お客様が商品を受け取る時には収穫してから3,4日が経過しています。スグ食べでは、箱詰め作業を農家さんにお願いすることにより、最短で収穫当日に商品を受け取ることができます。</div>
+              </div>
 
-                </div>
+              <div class="qa">
+                <div class="q"><span>Q</span>どんな農家さんが登録してるの？</div>
+                <div class="a"><span>A</span>農薬不使用にこだわる、オーガニック農家さんのみが登録しています。
+                    有機栽培や自然栽培などの環境に配慮した農法で生産するには、通常以上に費用も手間もかかります。そんな中でも、「安心な野菜を食べて欲しい」という強い思いを持って、こだわって野菜を作っている農家さんがいます。 そういった、厳選されたオーガニック農家さんのみが登録しているため、安心してお買い物を楽しんでいただけます。</div>
+              </div>
 
-                <div class="question-btn">+</div>
-            </div>
-            <div class="question-2">
-                <div class="question-text">
-                    <div class="question-Q">Q</div>
-                    <p>どんな農家さんが登録してるの？</p>
-                </div>
-                <div class="question-btn">+</div>
-            </div>
 
         </div>
 
@@ -318,18 +310,22 @@
                     </div>
 
                     <div class="introduction-discription">
-                        <h4>【ベジックス】旬＊お試し野菜セット(6品目)</h4>
-                        <p>通常購入<span>¥1,280円</span>(税込/送料別)
-                        </p>
+                        <h4><span class="introduction-discription-heading">【ベジックス】</span>
+                            <div class="introduction-discription-name">旬＊お試し野菜セット(6品目)</div>
+                        </h4>
+                        <div class="item-box">
+                            <p>通常購入<span class="price">¥1,280円</span>
+                            <div class="tax">(税込/送料別)</div>
+                            </p>
+                        </div>
 
                         <div class="introduction-item1-btn">
                             <p>購入はこちら</p>
                         </div>
-
                     </div>
-
-
                 </div>
+
+
 
                 <div class="introduction-item2">
                     <div class=introduction-image-wrepper>
@@ -337,9 +333,14 @@
                     </div>
 
                     <div class="introduction-discription">
-                        <h4>【ベジックス】旬＊お試し野菜セット(6品目)</h4>
-                        <p>通常購入<span>¥1,280円</span>(税込/送料別)
-                        </p>
+                        <h4><span class="introduction-discription-heading">【くちぶえ農園】</span>
+                            <div class="introduction-discription-name">旬＊お試し野菜セット(6品目)</div>
+                        </h4>
+                        <div class="item-box">
+                            <p>通常購入<span class="price">¥1,280円</span>
+                            <div class="tax">(税込/送料別)</div>
+                            </p>
+                        </div>
 
                         <div class="introduction-item1-btn">
                             <p>購入はこちら</p>
@@ -349,10 +350,6 @@
 
 
                 </div>
-
-
-
-
 
             </div>
 
@@ -402,6 +399,15 @@
                 $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
             });
 
+
+
+ 
+            $('.q').click(function(){
+            $(this).siblings('.a').stop().slideToggle();
+            $('.q').not($(this)).siblings('.a').slideUp();
+            $(this).toggleClass('active');
+            $('.q').not($(this)).removeClass('active');
+            });
 
 
         });
